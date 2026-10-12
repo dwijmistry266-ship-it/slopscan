@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slopscan"
+version = "0.1.0"
+description = "AI slop detector for your codebase — static analysis that flags low-quality patterns typical of AI-generated Python."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Dwij Mistry" }]
+keywords = ["lint", "static-analysis", "code-quality", "ai-generated-code"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+slopscan = "slopscan.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/dwijmistry266-ship-it/slopscan"
+Issues = "https://github.com/dwijmistry266-ship-it/slopscan/issues"
+
+[tool.setuptools.packages.find]
+include = ["slopscan*"]
